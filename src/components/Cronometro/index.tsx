@@ -1,8 +1,13 @@
 import Botao from "../Botao";
 import Relogio from "./Relogio";
 import style from "./Cronometro.module.scss";
+import { ITarefa } from "../../Types/Tarefa";
 
-export default function Cronometro() {
+interface Props {
+  selecionado: ITarefa | undefined;
+}
+
+export default function Cronometro({ selecionado }: Props) {
   return (
     <div className={style.cronometro}>
       <p className={style.titulo}>Escolha um card e inicie o cronômetro</p>
